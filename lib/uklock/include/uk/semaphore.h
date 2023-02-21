@@ -26,7 +26,7 @@
 #define __UK_SEMAPHORE_H__
 
 #pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdiscarded-qualifiers"
+#pragma GCC diagnostic ignored "-Wincompatible-pointer-types-discards-qualifiers"
 
 #include <uk/config.h>
 #include <flexos/isolation.h>
