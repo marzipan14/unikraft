@@ -10,19 +10,19 @@ architecture = "x86_64"
 
 [list]
 origins = [
+  "https://github.com/marzipan14/app-flexos-example.git",
+  "https://github.com/marzipan14/lib-flexos-example.git",
+  "https://github.com/marzipan14/app-redis.git",
+  "https://github.com/marzipan14/lib-redis.git",
+  "https://github.com/marzipan14/lib-lwip.git",
   "https://github.com/project-flexos/lib-newlib.git",
   "https://github.com/project-flexos/lib-tlsf.git",
-  "https://github.com/marzipan14/app-flexos-example.git",
   "https://github.com/project-flexos/app-flexos-microbenchmarks.git",
-  "https://github.com/marzipan14/lib-flexos-example.git",
   "https://github.com/project-flexos/lib-flexos-microbenchmarks.git",
-  "https://github.com/project-flexos/lib-lwip.git",
   "https://github.com/project-flexos/lib-nginx.git",
   "https://github.com/project-flexos/app-nginx.git",
   "https://github.com/project-flexos/lib-iperf.git",
   "https://github.com/project-flexos/app-iperf.git",
   "https://github.com/project-flexos/unikraft.git",
-  "https://github.com/marzipan14/app-redis.git",
-  "https://github.com/marzipan14/lib-redis.git",
   "https://github.com/project-flexos/lib-pthread-embedded.git",
 ]

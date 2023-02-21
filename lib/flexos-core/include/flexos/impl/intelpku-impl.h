@@ -1795,13 +1795,13 @@ do {									\
 #define _flexos_intelpku_gate(N, key_from, key_to, fname, ...)		\
 do {									\
 	UK_CTASSERT(N <= 6);						\
-	__flexos_intelpku_gate ## N (key_from, key_to, fname __VA_OPT__(,) __VA_ARGS__); \
+	__flexos_intelpku_gate ## N (key_from, key_to, fname, ##__VA_ARGS__); \
 } while (0)
 
 #define _flexos_intelpku_gate_r(N, key_from, key_to, retval, fname, ...)\
 do {									\
 	UK_CTASSERT(N <= 6);						\
-	__flexos_intelpku_gate ## N ## _r (key_from, key_to, retval, fname __VA_OPT__(,) __VA_ARGS__); \
+	__flexos_intelpku_gate ## N ## _r (key_from, key_to, retval, fname, ##__VA_ARGS__); \
 } while (0)
 
 #endif

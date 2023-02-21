@@ -116,8 +116,7 @@ extern struct uk_alloc *_uk_alloc_head;
  * workaround.
  */
 
-#pragma GCC push_options
-#pragma GCC optimize("O0")
+#pragma clang attribute push(__attribute__((optnone)), apply_to = any(function)) 
 #endif
 static inline struct uk_alloc *uk_alloc_get_default(void)
 {
@@ -133,7 +132,6 @@ static inline struct uk_alloc *uk_alloc_get_default(void)
 /* __FLEXOS MARKER__: insert compartment-specific allocator cases here. */
 	case 0x3fffffff:
 		/* reserved for shared data */
-                __attribute__((fallthrough));
 	default:
 		uk_pr_debug("Allocating from a context where the current "
 			 "compartment cannot be clearly determined.");
@@ -144,7 +142,7 @@ static inline struct uk_alloc *uk_alloc_get_default(void)
 	return _uk_alloc_head;
 }
 #if CONFIG_LIBFLEXOS_INTELPKU
-#pragma GCC pop_options
+#pragma clang attribute pop 
 #endif
 
 /* wrapper functions */
